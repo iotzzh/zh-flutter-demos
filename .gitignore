@@ -1,3 +1,5 @@
+build/*
+.dart_tool/*
 # Android related
 **/android/**/gradle-wrapper.jar
 **/android/.gradle
