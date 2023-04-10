@@ -13,7 +13,7 @@ class ZHTextStyleState extends State<ZHTextStyle> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Text Style'),
+          title: const Text('文字样式(Text&Style)'),
           centerTitle: true,
         ),
         body: ListView(

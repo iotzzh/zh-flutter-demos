@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zh_flutter_demos/views/basic/text_style.dart';
+import 'package:zh_flutter_demos/views/basic/button.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,13 +13,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
-      theme: ThemeData.dark(useMaterial3: true),
+      theme: ThemeData.light(useMaterial3: true),
       home: Scaffold(
         appBar: AppBar(title: const Text(_title), centerTitle: true),
         body: const MyStatefulWidget(),
       ),
       routes: {
         'text_style': (context) => const ZHTextStyle(),
+        'button': (context) => const ZHButton(),
       },
     );
   }
@@ -55,7 +57,7 @@ List<Item> generateItems() {
       ),
       ItemButton(
         text: '按钮',
-        routeName: 'text_style',
+        routeName: 'button',
       )
     ]),
     Item(headerValue: '布局类组件', buttons: [
