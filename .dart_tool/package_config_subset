@@ -1,3 +1,7 @@
+args
+2.18
+file:///C:/Users/zhangzhonghua.HS921593/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/args-2.4.0/
+file:///C:/Users/zhangzhonghua.HS921593/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/args-2.4.0/lib/
 async
 2.18
 file:///C:/Users/zhangzhonghua.HS921593/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/async-2.11.0/
@@ -30,6 +34,10 @@ flutter_lints
 2.17
 file:///C:/Users/zhangzhonghua.HS921593/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/flutter_lints-2.0.1/
 file:///C:/Users/zhangzhonghua.HS921593/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/flutter_lints-2.0.1/lib/
+flutter_markdown
+2.12
+file:///C:/Users/zhangzhonghua.HS921593/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/flutter_markdown-0.6.14/
+file:///C:/Users/zhangzhonghua.HS921593/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/flutter_markdown-0.6.14/lib/
 js
 2.19
 file:///C:/Users/zhangzhonghua.HS921593/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/js-0.6.7/
@@ -38,6 +46,10 @@ lints
 2.17
 file:///C:/Users/zhangzhonghua.HS921593/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/lints-2.0.1/
 file:///C:/Users/zhangzhonghua.HS921593/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/lints-2.0.1/lib/
+markdown
+2.19
+file:///C:/Users/zhangzhonghua.HS921593/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/markdown-7.0.2/
+file:///C:/Users/zhangzhonghua.HS921593/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/markdown-7.0.2/lib/
 matcher
 2.18
 file:///C:/Users/zhangzhonghua.HS921593/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/matcher-0.12.15/
