@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zh_flutter_demos/views/basic/text_style.dart';
 import 'package:zh_flutter_demos/views/basic/button.dart';
 import 'package:zh_flutter_demos/views/basic/img_icon.dart';
+import 'package:zh_flutter_demos/views/form/switch.dart';
 
 void main() => runApp(const MyApp());
 
@@ -20,9 +21,12 @@ class MyApp extends StatelessWidget {
         body: const MyStatefulWidget(),
       ),
       routes: {
+        // 基础组件
         'text_style': (context) => const ZHTextStyle(),
         'button': (context) => const ZHButton(),
         'img_icon': (context) => const ZHImgIcon(),
+        // 表单组件
+        'switch': (context) => const ZHSwitch(),
       },
     );
   }
@@ -64,6 +68,12 @@ List<Item> generateItems() {
       ItemButton(
         text: 'Img & Button',
         routeName: 'img_icon',
+      ),
+    ]),
+    Item(headerValue: '表单组件', buttons: [
+      ItemButton(
+        text: '开关(Switch)',
+        routeName: 'switch',
       )
     ]),
     Item(headerValue: '布局类组件', buttons: [
