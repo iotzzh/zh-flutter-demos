@@ -182,37 +182,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     Navigator.pushNamed(context, button.routeName);
                   },
                   child: Text(
+                    style: const TextStyle( color: Colors.cyan),
                     button.text,
                     textAlign: TextAlign.center,
+                    
                   ));
             }).toList(),
-            // [
-            //   ElevatedButton(
-            //     child: const Text(
-            //       '文本',
-            //       textAlign: TextAlign.center,
-            //       textDirection: TextDirection.ltr,
-            //     ),
-            //     onPressed: () {
-            //       Navigator.pushNamed(
-            //         context,
-            //         'text_style',
-            //       );
-            //     },
-            //   ),
-            //   TextButton(
-            //     child: const Text(
-            //       '文本',
-            //       textAlign: TextAlign.center,
-            //     ),
-            //     onPressed: () {
-            //       Navigator.pushNamed(
-            //         context,
-            //         'text_style',
-            //       );
-            //     },
-            //   ),
-            // ]
           ),
           isExpanded: item.isExpanded,
         );
