@@ -4,6 +4,7 @@ import 'package:zh_flutter_demos/views/basic/button.dart';
 import 'package:zh_flutter_demos/views/basic/img_icon.dart';
 import 'package:zh_flutter_demos/views/form/form.dart';
 import 'package:zh_flutter_demos/views/form/switch.dart';
+import 'package:zh_flutter_demos/views/form/checkbox.dart';
 
 void main() => runApp(const MyApp());
 
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         // 表单组件
         'form': (context) => const ZHForm(),
         'switch': (context) => const ZHSwitch(),
+        'checkbox': (context) => const ZHCheckbox(),
       },
     );
   }
@@ -77,9 +79,13 @@ List<Item> generateItems() {
         text: '表单(Form)',
         routeName: 'form',
       ),
-            ItemButton(
+      ItemButton(
         text: '开关(Switch)',
         routeName: 'switch',
+      ),
+      ItemButton(
+        text: '复选框(checkbox)',
+        routeName: 'checkbox',
       )
     ]),
     Item(headerValue: '布局类组件', buttons: [
