@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zh_flutter_demos/views/basic/text_style.dart';
 import 'package:zh_flutter_demos/views/basic/button.dart';
 import 'package:zh_flutter_demos/views/basic/img_icon.dart';
+import 'package:zh_flutter_demos/views/form/form.dart';
 import 'package:zh_flutter_demos/views/form/switch.dart';
 
 void main() => runApp(const MyApp());
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         'button': (context) => const ZHButton(),
         'img_icon': (context) => const ZHImgIcon(),
         // 表单组件
+        'form': (context) => const ZHForm(),
         'switch': (context) => const ZHSwitch(),
       },
     );
@@ -72,6 +74,10 @@ List<Item> generateItems() {
     ]),
     Item(headerValue: '表单组件', buttons: [
       ItemButton(
+        text: '表单(Form)',
+        routeName: 'form',
+      ),
+            ItemButton(
         text: '开关(Switch)',
         routeName: 'switch',
       )
