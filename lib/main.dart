@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zh_flutter_demos/views/basic/text_style.dart';
 import 'package:zh_flutter_demos/views/basic/button.dart';
+import 'package:zh_flutter_demos/views/basic/img_icon.dart';
 
 void main() => runApp(const MyApp());
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         'text_style': (context) => const ZHTextStyle(),
         'button': (context) => const ZHButton(),
+        'img_icon': (context) => const ZHImgIcon(),
       },
     );
   }
@@ -58,6 +60,10 @@ List<Item> generateItems() {
       ItemButton(
         text: '按钮',
         routeName: 'button',
+      ),
+      ItemButton(
+        text: 'Img & Button',
+        routeName: 'img_icon',
       )
     ]),
     Item(headerValue: '布局类组件', buttons: [
@@ -184,10 +190,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     Navigator.pushNamed(context, button.routeName);
                   },
                   child: Text(
-                    style: const TextStyle( color: Colors.cyan),
+                    style: const TextStyle(color: Colors.cyan),
                     button.text,
                     textAlign: TextAlign.center,
-                    
                   ));
             }).toList(),
           ),
