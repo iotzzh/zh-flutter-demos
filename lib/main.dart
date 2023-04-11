@@ -5,6 +5,10 @@ import 'package:zh_flutter_demos/views/basic/img_icon.dart';
 import 'package:zh_flutter_demos/views/form/form.dart';
 import 'package:zh_flutter_demos/views/form/switch.dart';
 import 'package:zh_flutter_demos/views/form/checkbox.dart';
+import 'package:zh_flutter_demos/views/layout/row_column.dart';
+import 'package:zh_flutter_demos/views/layout/flex.dart';
+import 'package:zh_flutter_demos/views/layout/wrap_flow.dart';
+import 'package:zh_flutter_demos/views/layout/stack_positioned.dart';
 
 void main() => runApp(const MyApp());
 
@@ -31,6 +35,10 @@ class MyApp extends StatelessWidget {
         'form': (context) => const ZHForm(),
         'switch': (context) => const ZHSwitch(),
         'checkbox': (context) => const ZHCheckbox(),
+        'row_column': (context) => const ZHRowColumn(),
+        'flex': (context) => const ZHFlex(),
+        'wrap_flow': (context) => const ZHWarpFlow(),
+        'stack_positioned': (context) => const ZHStackPositioned(),
       },
     );
   }
@@ -90,9 +98,21 @@ List<Item> generateItems() {
     ]),
     Item(headerValue: '布局类组件', buttons: [
       ItemButton(
-        text: '文本',
-        routeName: 'text_style',
-      )
+        text: '线性布局(row&column)',
+        routeName: 'row_column',
+      ),
+      ItemButton(
+        text: '弹性布局(flex)',
+        routeName: 'flex',
+      ),
+      ItemButton(
+        text: '流式布局(wrap&flow)',
+        routeName: 'wrap_flow',
+      ),
+      ItemButton(
+        text: '层叠布局(stack&positioned)',
+        routeName: 'stack_positioned',
+      ),
     ]),
     Item(headerValue: '容器类组件', buttons: [
       ItemButton(
@@ -204,8 +224,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               title: Text(item.headerValue),
             );
           },
-          body: Flex(
+          body: Wrap(
             direction: Axis.horizontal,
+            textDirection: TextDirection.ltr,
             children: item.buttons.map<Widget>((ItemButton button) {
               return TextButton(
                   onPressed: () {
