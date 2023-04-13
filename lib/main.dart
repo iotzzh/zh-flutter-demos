@@ -10,6 +10,14 @@ import 'package:zh_flutter_demos/views/layout/flex.dart';
 import 'package:zh_flutter_demos/views/layout/wrap_flow.dart';
 import 'package:zh_flutter_demos/views/layout/stack_positioned.dart';
 
+import 'package:zh_flutter_demos/views/container/clip.dart';
+import 'package:zh_flutter_demos/views/container/container.dart';
+import 'package:zh_flutter_demos/views/container/decorated_box.dart';
+import 'package:zh_flutter_demos/views/container/fitted_box.dart';
+import 'package:zh_flutter_demos/views/container/padding.dart';
+import 'package:zh_flutter_demos/views/container/scaffold.dart';
+import 'package:zh_flutter_demos/views/container/transform.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -39,6 +47,14 @@ class MyApp extends StatelessWidget {
         'flex': (context) => const ZHFlex(),
         'wrap_flow': (context) => const ZHWarpFlow(),
         'stack_positioned': (context) => const ZHStackPositioned(),
+        // 容器类组件
+        'clip': (context) => const ZHClip(),
+        'container': (context) => const ZHContainer(),
+        'decorated_box': (context) => const ZHDecoratedBox(),
+        'fitted_box': (context) => const ZHFittedBox(),
+        'padding': (context) => const ZHPadding(),
+        'scaffold': (context) => const ZHScaffold(),
+        'transform': (context) => const ZHTransform(),
       },
     );
   }
@@ -116,9 +132,33 @@ List<Item> generateItems() {
     ]),
     Item(headerValue: '容器类组件', buttons: [
       ItemButton(
-        text: '文本',
-        routeName: 'text_style',
-      )
+        text: '填充',
+        routeName: 'padding',
+      ),
+      ItemButton(
+        text: '容器组件',
+        routeName: 'container',
+      ),
+      ItemButton(
+        text: '变换',
+        routeName: 'transform',
+      ),
+      ItemButton(
+        text: '装饰容器',
+        routeName: 'decorated_box',
+      ),
+      ItemButton(
+        text: '剪裁',
+        routeName: 'clip',
+      ),
+      ItemButton(
+        text: '空间适配',
+        routeName: 'fitted_box',
+      ),
+      ItemButton(
+        text: '页面骨架',
+        routeName: 'scaffold',
+      ),
     ]),
     Item(headerValue: '可滚动组件', buttons: [
       ItemButton(
@@ -185,7 +225,7 @@ List<Item> generateItems() {
   return List<Item>.generate(items.length, (int index) {
     return Item(
       headerValue: items[index].headerValue,
-      isExpanded: index == 2,
+      isExpanded: index == 3,
       buttons: items[index].buttons,
     );
   });
@@ -233,7 +273,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     Navigator.pushNamed(context, button.routeName);
                   },
                   child: Text(
-                    style: const TextStyle(color: Colors.cyan),
+                    style: const TextStyle(color: Colors.purple, fontSize: 18),
                     button.text,
                     textAlign: TextAlign.center,
                   ));
