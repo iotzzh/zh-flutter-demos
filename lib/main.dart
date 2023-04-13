@@ -185,7 +185,7 @@ List<Item> generateItems() {
   return List<Item>.generate(items.length, (int index) {
     return Item(
       headerValue: items[index].headerValue,
-      isExpanded: index == 0,
+      isExpanded: index == 2,
       buttons: items[index].buttons,
     );
   });
