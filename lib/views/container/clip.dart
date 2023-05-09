@@ -24,7 +24,7 @@ class ZHClipState extends State<ZHClip> {
     var avatar = Image(image: AssetImage("assets/images/2.png"), height: 50.0);
     return Scaffold(
         appBar: AppBar(
-          title: const Text('填充(Padding)'),
+          title: const Text('剪裁(Clip)'),
           centerTitle: true,
         ),
         body: ListView(
